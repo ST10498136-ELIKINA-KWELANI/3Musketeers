@@ -6,7 +6,7 @@ import styles from "../css/styles";
 
 const engine = new AgentEngine();
 
-export default function Dashboard() {
+export default function Dashboard({navigation}: any) {
   const [currentReport, setCurrentReport] = useState<CampusReport | null>(null);
   const [decisionLogs, setDecisionLogs] = useState<DecisionLogEntry[]>([]);
   const [activeTab, setActiveTab] = useState<'decision' | 'incident' | 'action'>('decision');
